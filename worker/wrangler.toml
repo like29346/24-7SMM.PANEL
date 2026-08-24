@@ -11,7 +11,8 @@ run_worker_first = ["/api/*", "/telegram/*"]
 [[d1_databases]]
 binding = "DB"
 database_name = "pro-smm-db"
-database_id = "PUT_YOUR_D1_DATABASE_ID_HERE"
+database_id = "d70d6df0-2990-4710-9bc5-6d8eaab85ad1"
+
 
 [vars]
 UPI_ID = "mantunsingh@slc"
