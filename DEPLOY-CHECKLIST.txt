@@ -1,0 +1,12 @@
+PRO-SMM QUICK DEPLOY
+
+1) Create NEW Cloudflare D1 database: pro-smm-db
+2) Copy database ID.
+3) Edit worker/wrangler.toml and replace PUT_YOUR_D1_DATABASE_ID_HERE
+4) Run: npx wrangler d1 execute pro-smm-db --remote --file=migrations/0001_init.sql
+5) Run: npx wrangler deploy -c worker/wrangler.toml
+6) Open: https://YOUR-WORKER-URL/api/health
+7) Must show: {"ok":true,"database":true}
+8) Open the Worker root URL and register a new account.
+9) Login.
+10) Do not put TELEGRAM_BOT_TOKEN in GitHub.
