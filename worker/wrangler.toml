@@ -18,6 +18,8 @@ database_id = "d70d6df0-2990-4710-9bc5-6d8eaab85ad1"
 UPI_ID = "mantunsingh@slc"
 UPI_NAME = "Mantun Singh"
 ADMIN_CHAT_ID = "5311840807"
+JWT_SECRET = "smm_panel_secret_key_99"
+
 
 # Never put TELEGRAM_BOT_TOKEN here.
 # Set it with: npx wrangler secret put TELEGRAM_BOT_TOKEN
