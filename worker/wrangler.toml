@@ -21,5 +21,6 @@ ADMIN_CHAT_ID = "5311840807"
 JWT_SECRET = "smm_panel_secret_key_99"
 
 
+
 # Never put TELEGRAM_BOT_TOKEN here.
 # Set it with: npx wrangler secret put TELEGRAM_BOT_TOKEN
