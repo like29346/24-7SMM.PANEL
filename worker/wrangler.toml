@@ -1,25 +1,23 @@
 name = "pro-smm"
 main = "src/index.js"
 compatibility_date = "2026-08-24"
+compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "../frontend"
 binding = "ASSETS"
-run_worker_first = ["/api/*", "/telegram/*"]
+run_worker_first = ["/*"]
 
-# IMPORTANT: replace database_id with the ID of your NEW D1 database.
 [[d1_databases]]
 binding = "DB"
 database_name = "pro-smm-db"
 database_id = "d70d6df0-2990-4710-9bc5-6d8eaab85ad1"
-
 
 [vars]
 UPI_ID = "mantunsingh@slc"
 UPI_NAME = "Mantun Singh"
 ADMIN_CHAT_ID = "5311840807"
 JWT_SECRET = "smm_panel_secret_key_99"
-
 
 
 # Never put TELEGRAM_BOT_TOKEN here.
