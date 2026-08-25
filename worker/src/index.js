@@ -137,8 +137,9 @@ async function api(request, env) {
     if (exists) return json({ error: "Username already exists" }, 409);
     const userId = `USR${crypto.randomUUID().replace(/-/g, "").slice(0, 8).toUpperCase()}`;
     const passwordHash = await sha256(password);
-    await env.DB.prepare("INSERT INTO users(id,user_id,username,password_hash,mobile,email,balance,created_at) VALUES(?,?,?,?,?,?,0,?)")
+    await env.DB.prepare("INSERT INTO users (id, user_id, username, password_hash, mobile, email, balance, created_at) VALUES (?, ?, ?, ?, ?, ?, 0, ?)")
 .bind(userId, userId, username, passwordHash, mobile, email, now()).run();
+
 
     await telegram(env, `NEW USER REGISTERED\nUser ID: ${userId}\nUsername: @${username}\nMobile: ${mobile}\nEmail: ${email}`);
     return json({ ok: true, userId }, 201);
